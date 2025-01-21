@@ -3,6 +3,7 @@
     padding: 0px;
     font-family: "Inter", serif;
     font-optical-sizing: auto;
+    cursor: pointer;
 }
 body{
     background-image: url("./Assets/Image/BackGround.jpg");
@@ -39,8 +40,5 @@ body{
     color: #fff;
     height: 2em;
     width: 2em;
-}
-#id1{
-    background-color: red;
 }
 /* Testing */
