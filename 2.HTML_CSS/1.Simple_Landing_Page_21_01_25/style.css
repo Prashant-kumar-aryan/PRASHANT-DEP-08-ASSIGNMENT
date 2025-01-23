@@ -3,7 +3,7 @@
     padding: 0px;
     font-family: "Inter", serif;
     font-optical-sizing: auto;
-    cursor: pointer;
+    /* cursor:alias; */
 }
 body{
     background-image: url("./Assets/Image/BackGround.jpg");
