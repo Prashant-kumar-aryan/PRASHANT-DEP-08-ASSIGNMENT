@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Async vs Defer</title>
+
+  <!-- Async script -->
+    <!-- <script src="script1.js" async></script> -->
+
+  <!-- Normal blocking script -->
+  <!-- <script src="script3.js"></script> -->
+
+  <!-- Defer script -->
+  <script src="script2.js" defer></script>
+</head>
+<body>
+  <h1>Check the Developer Console</h1>
+
+  <!-- Long HTML content -->
+  <div>
+    <h2>Section 1</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
+    <p>Integer euismod, sem ut sollicitudin venenatis, tortor orci tempor risus, in vulputate ex diam at arcu.</p>
+  </div>
+
+  <div>
+    <h2>Section 2</h2>
+    <p>Quisque vehicula, ipsum ac malesuada vestibulum, mauris odio euismod urna, sit amet convallis elit justo nec urna.</p>
+    <p>Sed tincidunt velit magna, ut tincidunt augue gravida nec. Nullam a quam velit. Cras euismod urna vel dapibus euismod.</p>
+  </div>
+
+  <!-- Repeated content to make it longer -->
+  <div>
+    <h2>Section 3</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
+    <p>Integer euismod, sem ut sollicitudin venenatis, tortor orci tempor risus, in vulputate ex diam at arcu.</p>
+  </div>
+
+  <div>
+    <h2>Section 4</h2>
+    <p>Quisque vehicula, ipsum ac malesuada vestibulum, mauris odio euismod urna, sit amet convallis elit justo nec urna.</p>
+    <p>Sed tincidunt velit magna, ut tincidunt augue gravida nec. Nullam a quam velit. Cras euismod urna vel dapibus euismod.</p>
+  </div>
+
+  <div>
+    <h2>Section 5</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
+    <p>Integer euismod, sem ut sollicitudin venenatis, tortor orci tempor risus, in vulputate ex diam at arcu.</p>
+  </div>
+
+  <h6></h6>
+  <!-- Add more content if needed -->
+  <footer>
+    <h2>Footer Section</h2>
+    <p>This is the footer of the page. Check the console to observe the script execution order.</p>
+  </footer>
+</body>
+</html>

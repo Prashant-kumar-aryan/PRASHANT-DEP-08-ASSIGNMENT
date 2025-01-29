@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Full-Width Canvas</title>
+  <style>
+    /* Reset body and html margin/padding */
+    body, html {
+      margin: 0;
+      padding: 0;
+      overflow: hidden; /* Prevent scrollbars */
+      height: 100%; /* Make sure the body covers the full viewport */
+    }
+
+    /* Make canvas take full width and height */
+    canvas {
+      display: block; /* Remove extra spacing */
+      width: 100vw; /* Full width of the viewport */
+      height: 100vh; /* Full height of the viewport */
+    }
+  </style>
+</head>
+<body>
+
+<canvas id="whiteboard"></canvas>
+
+<script>
+    const canvas = document.getElementById('whiteboard');
+    const ctx = canvas.getContext('2d');
+  
+    // Variables to track drawing state
+    let isDrawing = false;
+    let lastX = 0;
+    let lastY = 0;
+  
+    // Function to start drawing
+    function startDrawing(e) {
+      isDrawing = true;
+      [lastX, lastY] = [e.offsetX, e.offsetY]; // Set starting point
+    }
+  
+    // Function to draw on the canvas
+    function draw(e) {
+      if (!isDrawing) return; // Stop if not drawing
+      ctx.strokeStyle = '#000'; // Black color
+      ctx.lineWidth = 2; // Line width
+      ctx.lineCap = 'round'; // Rounded edges
+      ctx.lineJoin = 'round'; // Smooth joins
+      ctx.beginPath();
+      ctx.moveTo(lastX, lastY); // Start from last point
+      ctx.lineTo(e.offsetX, e.offsetY); // Draw to the current point
+      ctx.stroke();
+      [lastX, lastY] = [e.offsetX, e.offsetY]; // Update last point
+    }
+  
+    // Function to stop drawing
+    function stopDrawing() {
+      isDrawing = false;
+      ctx.beginPath(); // Reset the path
+    }
+  
+    // Event listeners
+    canvas.addEventListener('mousedown', startDrawing);
+    canvas.addEventListener('mousemove', draw);
+    canvas.addEventListener('mouseup', stopDrawing);
+    canvas.addEventListener('mouseout', stopDrawing);
+  </script>
+
+</body>
+</html>

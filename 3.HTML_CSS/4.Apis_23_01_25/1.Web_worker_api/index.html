@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>count: <span id="count">0</span></p>
+    <button id="11"></button>
+    <button onclick="startWorker()">Start</button>
+    <button onclick="stopWorker()">Stop</button>
+    
+    <script>
+        let w;     
+        function startWorker() {
+            if (typeof(w) === "undefined") {
+                w = new Worker("worker.js");
+                
+                w.onmessage = function(event) {
+                    const message = event.data;
+                    let btn = document.getElementById("11");
+                    btn.textContent = message.text;
+                    btn.style.backgroundColor = message.color;
+                    btn.style.padding="10px 20px"
+                    btn.style.borderRadius="5px";
+                    
+                    let countSpan = document.getElementById('count');
+                    countSpan.textContent = parseInt(countSpan.textContent) + 1;
+                };
+            }
+        }
+
+        function stopWorker() {
+            if (w) {
+                w.terminate();
+                w = undefined;
+            }
+        }
+    </script>
+</body>
+</html>

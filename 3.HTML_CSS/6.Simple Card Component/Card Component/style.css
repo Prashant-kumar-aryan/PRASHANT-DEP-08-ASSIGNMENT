@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+body {
+    background-color: #E0E0E0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: "Poppins", sans-serif;
+}
+.card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    width: 16%;
+    gap: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.heading{
+    padding-left: 10px;
+}
+.lamp-img {
+    width: 100%;
+    max-width: 30rem;
+    border-radius: 20px;
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 15px;
+}
+
+.profile-img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+
+.user-name {
+    font-family: "Alata", sans-serif;
+    font-size: 18px;
+    color: #000;
+}
+
+.time {
+    font-family: "Alata", sans-serif;
+    font-size: 16px;
+    color: #BABCC1;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    .card-container {
+        width: 60%;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .heading {
+        font-size: 13px; /* Mobile Typography */
+        padding-left: 5px;
+    }
+
+    .lamp-img {
+        width: 100%;
+        max-width: 100%;
+        border-radius: 15px;
+    }
+
+    .profile-container {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .profile-img {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .user-name {
+        font-size: 11px; /* Mobile Typography */
+    }
+
+    .time {
+        font-size: 10px; /* Mobile Typography */
+    }
+}
+
+@media(min-width:769px) and (max-width: 1024px) {
+    body {
+        padding: 30px;
+    }
+
+    .card-container {
+        width: 40%;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .heading {
+        font-size: 20px; /* Tablet Typography */
+        padding-left: 10px;
+    }
+
+    .lamp-img {
+        width: 100%;
+        max-width: 100%;
+        border-radius: 15px;
+    }
+
+    .profile-container {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        gap: 15px;
+    }
+
+    .profile-img {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .user-name {
+        font-size: 18px; /* Tablet Typography */
+    }
+
+    .time {
+        font-size: 16px; /* Tablet Typography */
+    }
+}
