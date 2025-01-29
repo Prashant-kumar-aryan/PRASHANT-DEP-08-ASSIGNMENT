@@ -1,0 +1,162 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+    color: #fff;
+}
+body{
+    background-color: #0077BE ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+h1{
+    font-size:35px;
+    text-align: center;
+    line-height: 1.2;
+    word-spacing: 1.2;
+}
+.sub-heading{
+    margin-top: 20px;
+    margin-bottom: 70px;
+    font-size: 30px;
+    text-align: center;
+    width: 55%;
+    font-weight: 300;
+}
+img{
+    height: 20rem;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+h3{
+    font-size: 26px;
+}
+p{
+    font-size: 22px;
+    text-align: left;
+}
+.card-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    padding: 40px;
+}
+article{
+    display: flex;
+    width: 28rem;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(14px);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+    body {
+        height: auto; /* Allow content to take full height */
+        padding: 20px;
+    }
+
+    main {
+        text-align: center;
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 18px; /* Reduce font size for smaller screens */
+        padding: 0 10px;
+    }
+
+    .sub-heading {
+        font-size: 12px; /* Reduce sub-heading size */
+        width: 90%; /* Allow better fit on small screens */
+        margin-bottom: 40px;
+    }
+
+    .card-container {
+        flex-direction: column; /* Stack cards vertically */
+        gap: 40px; /* Reduce gap between cards */
+        padding: 20px;
+    }
+
+    article {
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 90%; /* Make cards take more space on smaller screens */
+        padding: 15px;
+    }
+
+    img {
+        height: 14rem; /* Reduce image size */
+        width: 100%; /* Make images responsive */
+    }
+
+    h3 {
+        font-size: 16px;
+        text-align: left; /* Adjust heading size */
+    }
+
+    p {
+        font-size: 14px; /* Adjust paragraph text */
+    }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    body {
+        height: auto;
+        padding: 30px;
+    }
+
+    main {
+        text-align: center;
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 30px; /* Slightly smaller than desktop */
+        padding: 0 15px;
+    }
+
+    .sub-heading {
+        font-size: 22px;
+        width: 80%;
+        margin-bottom: 50px;
+    }
+
+    .card-container {
+        flex-wrap: wrap; /* Allow wrapping for better layout */
+        gap: 60px; /* Reduce spacing */
+        padding: 30px;
+    }
+
+    article {
+        width: 80%; /* Make cards take more space */
+        padding: 20px;
+        align-items: center; /* Center content */
+        text-align: center;
+    }
+
+    img {
+        height: 16rem; /* Reduce image size */
+        width: 100%;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+}
